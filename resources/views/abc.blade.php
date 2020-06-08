@@ -11,7 +11,6 @@
             <div id="main" class="row">
                 <div>
                     <table class="table">
-                        <caption>List of users</caption>
                         <tbody>
                             <tr>
                                 <td data-word="a">Aa [ ei ]</td>
