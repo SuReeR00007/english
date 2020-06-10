@@ -13,8 +13,14 @@
                     <table class="table">
                         <tbody>
                             <tr>
+                                <td class="word" >Word</td>
+                                <td>Translate</td>
+                            </tr>
+                            <tr>
                                 <td class="word" data-word="act">Act</td>
                                 <td>Акт</td>
+                                <td class="word" data-word="old">Old</td>
+                                <td>Старый</td>
                             </tr>
                             <tr>
                                 <td class="word" data-word="bay">Bay</td>
@@ -68,10 +74,7 @@
                                 <td class="word" data-word="no">No</td>
                                 <td>Нет</td>
                             </tr>
-                            <tr>
-                                <td class="word" data-word="old">Old</td>
-                                <td>Старый</td>
-                            </tr>
+                            
                             <tr>
                                 <td class="word" data-word="pen">Pen</td>
                                 <td>Ручка</td>
