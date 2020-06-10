@@ -15,6 +15,8 @@
                             <tr>
                                 <td class="word" >Word</td>
                                 <td>Translate</td>
+                                <td class="word" >Word</td>
+                                <td>Translate</td>
                             </tr>
                             <tr>
                                 <td class="word" data-word="act">Act</td>
