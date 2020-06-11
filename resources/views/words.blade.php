@@ -4,11 +4,8 @@
         @include('head')
     </head>
     <body>
-        <div class="container">
-            <header class="row">
-                @include('header')
-            </header>
-            <div id="main" class="row">
+        @include('header')
+            <div id="main" class="row container d-flex justify-content-center">
                 <div>
                     <table class="table">
                         <tbody>
@@ -103,6 +100,5 @@
                     </table>
                 </div>
             </div>
-        </div>
     </body>
 </html>
