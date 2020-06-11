@@ -61,7 +61,7 @@ class TeachController extends Controller
             $variant = array_merge(
                     [$this->words[$key]],
                     array_map(function($key) {
-                        return  $this->words[$key];
+                            return  $this->words[$key];
                         }, $wrong_key)
                     );
             shuffle($variant);
@@ -75,5 +75,18 @@ class TeachController extends Controller
         return view('translate', [
              'questions' => $questions,
         ]);
+    }
+    
+    public function check(Request $request)
+    {
+        $points = 0;
+        foreach ($request->all() as $key => $answer) {
+            if ($key != '_token') {
+                if ($answer == $this->words[$key]) {
+                    $points++;
+                }
+            }
+        }
+         return response(['points' => $points], 200);
     }
 }
