@@ -6,6 +6,35 @@ use Illuminate\Http\Request;
 
 class TeachController extends Controller
 {
+    protected $words = [
+            'Act' => 'Акт',
+            'Bay' => 'Залив',
+            'City' => 'Город',
+            'Day' => 'День',
+            'Eat' => 'Еда',
+            'Fan' => 'Поклонник',
+            'Gas' => 'Газ',
+            'Hay' => 'Сено',
+            'Ice' => 'Лед',
+            'Key' => 'Ключ',
+            'Lip' => 'Губа',
+            'My' => 'Мой',
+            'No' => 'Нет',
+            'Old' => 'Старый',
+            'Pen' => 'Ручка',
+            'Queen' => 'Королева',
+            'Rain' => 'Дождь',
+            'Snow' => 'Снег',
+            'Text' => 'Текст',
+            'Use' => 'Использовать',
+            'Very' => 'Очень',
+            'Jew' => 'Иудей',
+            'Wait' => 'Подождите',
+            'X-ray' => 'Рентген',
+            'Yes' => 'Да',
+            'Zoo' => 'Зоопарк'            
+        ];
+    
     public function home()
     {
          return view('home');
@@ -23,6 +52,28 @@ class TeachController extends Controller
     
     public function translate()
     {
-         return view('translate');
+        
+        $questions = [];
+        $keys = array_rand($this->words, 10);
+        $num = 1;
+        foreach ($keys as $key) {
+            $wrong_key = array_rand($this->words, 3);
+            $variant = array_merge(
+                    [$this->words[$key]],
+                    array_map(function($key) {
+                        return  $this->words[$key];
+                        }, $wrong_key)
+                    );
+            shuffle($variant);
+            $questions[] = [
+                'number' => $num,
+                'word' => $key,
+                'variant' => $variant
+            ];
+            $num++;
+        }
+        return view('translate', [
+             'questions' => $questions,
+        ]);
     }
 }
