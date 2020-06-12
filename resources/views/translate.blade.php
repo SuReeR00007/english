@@ -18,7 +18,7 @@
                     @endforeach
                 </div>
                 @endforeach
-                <input id="btn" value="Submit" type="submit" /> <input value="Reset" type="reset" />
+                <input id="btn" value="Submit" type="submit" class="btn btn-primary"/> <input value="Reset" type="reset" class="btn btn-danger"/>
             </form>
         </div>
     </body>
