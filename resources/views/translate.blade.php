@@ -6,7 +6,7 @@
     <body>
         @include('header')
         <div id="main" class="row">
-            <form name="quiz"  class="quizform container">
+            <form name="quiz" action="#" class="quizform container">
                 @csrf
                 @foreach ($questions as $question)
                 <div class="quizsection">

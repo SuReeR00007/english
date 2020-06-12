@@ -57,7 +57,10 @@ class TeachController extends Controller
         $keys = array_rand($this->words, 10);
         $num = 1;
         foreach ($keys as $key) {
+            $val = $this->words[$key];
+            unset($this->words[$key]);
             $wrong_key = array_rand($this->words, 3);
+            $this->words[$key] = $val;
             $variant = array_merge(
                     [$this->words[$key]],
                     array_map(function($key) {
@@ -81,10 +84,8 @@ class TeachController extends Controller
     {
         $points = 0;
         foreach ($request->all() as $key => $answer) {
-            if ($key != '_token') {
-                if ($answer == $this->words[$key]) {
-                    $points++;
-                }
+            if ($key != '_token' and $answer == $this->words[$key]) {
+                $points++;        
             }
         }
          return response(['points' => $points], 200);
