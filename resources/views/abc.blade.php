@@ -8,7 +8,7 @@
         <div id="main" class="row container d-flex justify-content-center">
             <div class="d-flex">
                 <div class="p-2">
-                    <img src="./storage/app/public/sound.png" width="100" height="100">
+                    <img src="./public/img/sound.png" width="100" height="100">
                 </div>
                 <div class="p-2">
                     <table class="table">
