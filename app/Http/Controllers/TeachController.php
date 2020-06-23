@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class TeachController extends Controller
 {
+    /**
+     *
+     * ассоциативный массив изученных слов
+     */
     protected $words = [
             'Act' => 'Акт',
             'Bay' => 'Залив',
@@ -50,11 +54,18 @@ class TeachController extends Controller
          return view('words');
     }
     
+    /**
+     * Берем 10 случайных ключей из $words
+     * перебераем все ключи
+     * на каждой итерации формируем элемент массива $questions с нумерацией, 
+     * Англ словом и 4 вариантами его перевода,
+     * где только 1 правильный
+     * 
+     */
     public function translate()
-    {
-        
+    {      
         $questions = [];
-        $keys = array_rand($this->words, 10);
+        $keys = array_rand($this->words, 10); 
         $num = 1;
         foreach ($keys as $key) {
             $val = $this->words[$key];
@@ -80,6 +91,12 @@ class TeachController extends Controller
         ]);
     }
     
+    
+    /**
+     * Проверяем сколько правильных ответов
+     * перебераем массив $request если ключ не _token и выбранный ответ есть в массиве $words,
+     * то добавляем 1 поинт
+     */
     public function check(Request $request)
     {
         $points = 0;

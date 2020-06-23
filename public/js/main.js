@@ -13,11 +13,6 @@ $(document).ready(function () {
     });
 });
 
-function check() {
-    var form = $('form.quizform').serialize();
-    console.log(form);
-}
-
 $(document).ready(function () {
     $("#btn").click(
             function () {
@@ -36,7 +31,7 @@ function sendAjaxForm(data, url) {
         data: data,
         success: function (response) {
             result = $.parseJSON(response).points;
-            alert('Правильных оответов: '+result);
+            alert('Правильных ответов: '+result);
             location.reload();
 
         },
