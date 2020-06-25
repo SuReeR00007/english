@@ -41,17 +41,38 @@ class TeachController extends Controller
     
     public function home()
     {
-         return view('home');
+         return view('home', [
+             'active' => [
+                'home' => 'active',
+                'abc' => '',
+                'words' => '',
+                'translate' => ''
+            ]
+         ]);
     }
     
     public function abc()
     {
-         return view('abc');
+         return view('abc', [
+             'active' => [
+                'home' => '',
+                'abc' => 'active',
+                'words' => '',
+                'translate' => ''
+            ]
+         ]);
     }
     
     public function words()
     {
-         return view('words');
+         return view('words', [
+             'active' => [
+                'home' => '',
+                'abc' => '',
+                'words' => 'active',
+                'translate' => ''
+            ]
+         ]);
     }
     
     /**
@@ -87,7 +108,13 @@ class TeachController extends Controller
             $num++;
         }
         return view('translate', [
-             'questions' => $questions,
+            'questions' => $questions,
+            'active' => [
+                'home' => '',
+                'abc' => '',
+                'words' => '',
+                'translate' => 'active'
+            ]
         ]);
     }
     
