@@ -20,7 +20,7 @@
 
                 <table class="table">
                     <tbody>
-                        <tr>
+                        <tr class="words">
                             <td>Word</td>
                             <td>Translate</td>
                             <td></td>
