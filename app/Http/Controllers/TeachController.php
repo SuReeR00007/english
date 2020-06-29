@@ -128,9 +128,11 @@ class TeachController extends Controller
     {
         $points = 0;
         foreach ($request->all() as $key => $answer) {
-//            if ($key != '_token' and $answer == $this->words[$key]) {
-//                $points++;        
-//            }
+            if ($key == 'url') {
+                continue;
+            } elseif ($key != '_token' and $answer == $this->words[$key]) {
+                $points++;        
+            }
         }
          return response(['points' => $points], 200);
     }
