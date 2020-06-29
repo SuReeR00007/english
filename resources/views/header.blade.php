@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+<nav class="navbar navbar-expand navbar-dark bg-dark mb-3">
         <div >
             <ul class="navbar-nav">
                 <li class="nav-item {{ $active['home'] }}">
