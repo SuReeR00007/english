@@ -8,7 +8,7 @@
         <div id="main" class="row container d-flex justify-content-center">
             <div class="d-flex">
                 <div class="p-2">
-                    <img src="./img/sound.png" width="100" height="100">
+                    <img src="./public/img/sound.png" width="100" height="100">
                 </div>
                 <div class="p-2">
                     <h3>Произношение является неотъемлемой частью изучения 

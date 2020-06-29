@@ -8,7 +8,7 @@
         <div id="main">
             <div class="d-flex">
                 <div class="p-2">
-                    <img src="./img/sound.png" width="100" height="100">
+                    <img src="./public/img/sound.png" width="100" height="100">
                 </div>
                 <div class="p-2">
                     <h3>В английском языке написание слов за последние 400-500 
