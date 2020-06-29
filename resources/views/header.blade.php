@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
-    <div class="container">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div >
             <ul class="navbar-nav">
                 <li class="nav-item {{ $active['home'] }}">
                     <a class="nav-link" href="./">Заглавная <span class="sr-only">(current)</span></a>
@@ -16,5 +15,4 @@
                 </li>
             </ul>
         </div>
-    </div>
 </nav>
