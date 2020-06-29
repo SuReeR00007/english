@@ -31,8 +31,7 @@ function sendAjaxForm(data, url) {
         dataType: "html",
         data: data,
         success: function (response) {
-            console.log(response);
-            //result = $.parseJSON(response).points;
+            result = $.parseJSON(response).points;
             alert('Правильных ответов: '+result);
             location.reload();
 
