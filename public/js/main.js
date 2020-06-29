@@ -17,7 +17,6 @@ $(document).ready(function () {
     $("#btn").click(
             function () {
                 data = $("form.quizform").serialize();
-                console.log(data);
                 sendAjaxForm(data, './check');
                 return false;
             }
