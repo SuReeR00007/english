@@ -127,6 +127,7 @@ class TeachController extends Controller
     public function check(Request $request)
     {
         $points = 0;
+        dd($request->all());
         foreach ($request->all() as $key => $answer) {
             if ($key != '_token' and $answer == $this->words[$key]) {
                 $points++;        
